@@ -1,12 +1,33 @@
 import './App.css';
 
-const greeting = "Hello";
-// const dom = <h1 className="App">{greeting}</h1>;
-
 function App() {
+  const profiles = [
+    { name: "take", age: 30 },
+    { name: "masa" }
+  ]
   return (
-    <h1 className="App">{greeting}</h1>
+    <div>
+      {
+        profiles.map((profile, index) => {
+          return <User name={profile.name} age={profile.age} key={index} />
+        })
+      }
+    </div>
   );
+}
+
+function User(props) {
+  return (
+    <div>
+      NAME: {props.name}<br />
+      AGE: {props.age}
+      <hr />
+    </div>
+  )
+}
+
+User.defaultProps = {
+  age: "NoAge"
 }
 
 export default App;
