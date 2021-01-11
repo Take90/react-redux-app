@@ -1,14 +1,11 @@
 import './App.css';
 
+const greeting = "Hello";
+// const dom = <h1 className="App">{greeting}</h1>;
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello From Tokyo Japan
-        </p>
-      </header>
-    </div>
+    <h1 className="App">{greeting}</h1>
   );
 }
 
